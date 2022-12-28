@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+  /* font-family: 'Big Shoulders Display', cursive; */
+}
+/******************************/
+/********GENERAL RULES*******/
+/******************************/
+:root {
+  --Bright-orange: #e38826;
+  --Dark-cyan: #006970;
+  --Very-dark-cyan: #004241;
+  --paragraphs: #ffffffbf;
+  --background-headings-buttons: #f2f2f2;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.main-container {
+  max-width: 75rem;
+  display: flex;
+}
+article {
+  padding: 3.2rem;
+}
+article img {
+  height: 2.4rem;
+  margin-bottom: 1.8rem;
+}
+article h2 {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--background-headings-buttons);
+  margin-bottom: 1.8rem;
+}
+article p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin-bottom: 6.4rem;
+  color: var(--paragraphs);
+}
+article .btn:link,
+article .btn:visited {
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+  background-color: var(--background-headings-buttons);
+  font-size: 1.2rem;
+  padding: 1.2rem 3rem;
+  border-radius: 10rem;
+  transition: 0.3s;
+}
+article .btn:hover,
+article .btn:active {
+  background-color: transparent;
+  color: var(--background-headings-buttons);
+  box-shadow: inset 0 0 0 2px #f2f2f2;
+}
+/******************************/
+/********ARTICLES*******/
+/******************************/
+.box-1 {
+  background-color: var(--Bright-orange);
+  border-top-left-radius: 0.9rem;
+  border-bottom-left-radius: 0.9rem;
+}
+.btn-1 {
+  color: var(--Bright-orange);
+}
+.box-2 {
+  background-color: var(--Dark-cyan);
+}
+.btn-2 {
+  color: var(--Dark-cyan);
+}
+.box-3 {
+  background-color: var(--Very-dark-cyan);
+  border-top-right-radius: 0.9rem;
+  border-bottom-right-radius: 0.9rem;
+}
+.btn-3 {
+  color: var(--Very-dark-cyan);
+}
+/******************************/
+/********MEDIA QUERIES*******/
+/******************************/
+@media (max-width: 48em) {
+  body {
+    padding: 1.5rem;
+  }
+  html {
+    font-size: 56.25%;
+  }
+  .main-container {
+    flex-direction: column;
+  }
+  .box-1 {
+    border-top-left-radius: 0.9rem;
+    border-top-right-radius: 0.9rem;
+    border-bottom-left-radius: 0;
+  }
+  .box-3 {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.9rem;
+    border-bottom-right-radius: 0.9rem;
+  }
+}
+.attribution {
+  font-size: 1.4rem;
+  text-align: center;
+}
+.attribution a {
+  text-decoration: none;
+  color: hsl(228, 45%, 44%);
+}
